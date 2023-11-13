@@ -1,0 +1,366 @@
+/* Font styles */
+@font-face {
+    font-family: 'CandyFont';
+    src: url('/Font/Comica Boom.otf') format('opentype'); /* Update format to 'opentype' */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body styles */
+body {
+    font-family: 'CandyFont', 'Times New Roman', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffef6;
+}
+
+/* Header styles */
+header {
+    background-color: rgb(247, 174, 166);
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Section styles */
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+/* Container styles for candies */
+.candy-container,
+.halloween-candy-container,
+.best-seller-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Individual candy styles */
+.candy,
+.halloween-candy,
+.best-seller {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+/* Image styles for candies */
+.candy img,
+.halloween-candy img,
+.best-seller img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Hover effect on candies */
+.candy:hover,
+.halloween-candy:hover,
+.best-seller:hover {
+    transform: scale(1.05);
+}
+
+/* Paragraph styles for candy names */
+.candy p,
+.halloween-candy p,
+.best-seller p {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Menu bar styles */
+.menubar {
+    background-color: #d6d6d6;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Navigation styles */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    color: #333;
+}
+
+/* Hover effect on navigation links */
+a span {
+    position: relative;
+    z-index: 1;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Heading styles */
+h2 {
+    margin-bottom: 1em;
+    color: rgb(247, 174, 166);
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+ul {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Link styles */
+a {
+    color: #fff;
+}
+
+/* Hover effect on links */
+a:hover {
+    color: rgb(255, 106, 0)
+}
+
+/* Hover effect on menu bar */
+.menubar:hover {
+    color: rgba(0, 0, 0, 0.1);
+}
+
+/* Loaded state for navigation links */
+ul.loaded {
+    transform: translateX(0);
+}
+
+/* Halloween section styles */
+.halloween-section {
+    background-color: #333;
+    color: rgb(247, 174, 166);
+    padding: 2em;
+    text-align: center;
+}
+
+/* Halloween candy styles */
+.halloween-candy {
+    background-color: black;
+    border: 1px solid #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on Halloween candies */
+.halloween-candy:hover {
+    transform: scale(1.5);
+}
+
+/* Image styles for Halloween candies */
+.halloween-candy img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Container styles for best-sellers */
+.candy,
+.halloween-candy,
+.best-seller {
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    padding: 1em;
+    box-sizing: border-box;
+    width: 200px; /* Set a fixed width for the container */
+}
+
+/* Image styles for best-sellers */
+.candy img,
+.halloween-candy img,
+.best-seller img {
+    width: 100%; /* Make images fill the container */
+    height: 100%; /* Make images fill the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    border-radius: 8px;
+}
+
+/* Best-seller text color */
+.best-seller {
+    color: black;
+}
+
+/* Background and text color for sections */
+.BS,
+.FC {
+    background-color: rgb(247, 174, 166);
+    color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+}
+
+/* Footer content styles */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Footer section styles */
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+/* Footer section heading styles */
+.footer-section h3 {
+    color: #fff;
+}
+
+/* Footer section paragraph styles */
+.footer-section p {
+    color: #ddd;
+}
+
+/* Footer social media icon styles */
+.footer-section.social a img {
+    width: 30px; /* Adjust the size of your social icons */
+    margin-right: 10px;
+}
+
+/* Footer bottom text styles */
+.footer-bottom {
+    text-align: center;
+    padding-top: 1em;
+    color: #ddd;
+    border-top: 1px solid #555;
+}
+
+/* Footer contact form styles */
+.footer-contact-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer contact form heading styles */
+.footer-contact-form h3 {
+    color: #fff;
+}
+
+/* Footer contact form styles */
+.footer-contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Footer contact form label styles */
+.footer-contact-form label {
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* Footer contact form input and textarea styles */
+.footer-contact-form input,
+.footer-contact-form textarea {
+    width: 50%; /* Reduce the width of input areas */
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Footer contact form button styles */
+.footer-contact-form button {
+    background-color: #f7aea6;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Footer contact form button hover styles */
+.footer-contact-form button:hover {
+    background-color: #ff6a00;
+}
+
+/* CSS for Centered Heading and Aligned Content in Mars Section */
+
+.mars-section {
+    background-color: #fffef6;
+    padding: 2em;
+    text-align: center;
+}
+
+.mars-info {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Align content to the left */
+}
+
+.mars-info h2 {
+    color: rgb(247, 174, 166);
+}
+
+.mars-info p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.mars-info strong {
+    display: block;
+    color: rgb(247, 174, 166);
+    margin-top: 10px;
+}
+.choco{
+    color: #f7aea6;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
